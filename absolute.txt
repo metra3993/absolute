@@ -1,0 +1,28 @@
+1
+a = input().split()
+sp = []
+for i in range(len(a)):
+    sp.append(int(a[i]))
+print(min(sp), max(sp))
+
+2
+s = input().split()
+s.sort()
+print(s)
+
+3
+print(list(set(input().split())))
+
+4
+sp_1 = input()
+sp_2 = input()
+sp = []
+if len(sp_1) > len(sp_2):
+    for i in range(len(sp_2)):
+        if sp_2[i] in ''.join(sp_1):
+            sp.append(sp_2[i])
+else:
+    for i in range(len(sp_1)):
+        if sp_1[i] in ''.join(sp_2):
+            sp.append(sp_1[i])
+print(sp)
